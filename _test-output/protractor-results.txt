@@ -1,0 +1,6 @@
+Protractor results for: 8/2/2016, 12:47:39 PM
+
+AppDir:./
+  Suite: QuickStart E2E Tests -- passed
+    passed - should display: My First Angular 2 App
+

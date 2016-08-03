@@ -3,6 +3,15 @@
     Hello {{name}}
 </div>
 <input type="text" [value]="name" (keyup.enter)="name = $event.target.value">
+<br />
 <input type="text" [value]="name" (blur)="name = $event.target.value">
-<input type="text" [(ngModel)]="name" >
+<br />
+<input type="text" [(ngModel)]="name">
+<br />
 <button (click)="changeColor()">Change Color</button>
+
+<ul>
+    <li *ngFor="let c of customers">
+        <app-customer [customer]="c"></app-customer>
+    </li>
+</ul>

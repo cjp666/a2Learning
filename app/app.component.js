@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var customer_component_1 = require('./customer/customer.component');
 var AppComponent = (function () {
     function AppComponent() {
         // [ ] means property binding
@@ -16,6 +17,13 @@ var AppComponent = (function () {
         this.title = 'Customer App';
         this.name = 'Chris';
         this.myColor = 'green';
+        this.customers = [
+            { id: 1, name: 'Ward' },
+            { id: 2, name: 'John' },
+            { id: 3, name: 'Sally' },
+            { id: 4, name: 'Chris' },
+            { id: 5, name: 'Emmet' }
+        ];
     }
     AppComponent.prototype.changeColor = function () {
         this.myColor = this.myColor === 'green' ? 'red' : 'green';
@@ -23,7 +31,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            templateUrl: 'app/app.component.html'
+            templateUrl: 'app/app.component.html',
+            directives: [customer_component_1.CustomerComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
